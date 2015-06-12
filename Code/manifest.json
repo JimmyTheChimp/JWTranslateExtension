@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "JW Translate",
+	"description": "JW Translate is a Chrome extension for on-the-fly translation of webpage text from its original language into the user's preferred language.",
+	"version": "1.0",
+	
+	"browser_action": {
+		"default_icon": "grayicon.png",
+		"default_popup": "popup.html"
+	},
+	
+	"content_scripts": [
+		{	
+			"matches": ["<all_urls>"],
+			"js": ["jquery-2.1.4.min.js", "contentscript.js"]
+		}
+	],
+	
+	"permissions": [
+		"activeTab",
+    "tabs",
+		"storage",
+		"https://ajax.googleapis.com/"		
+	]
+}
