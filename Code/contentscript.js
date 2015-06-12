@@ -37,7 +37,14 @@
 		
 		if(selectedText.length > 0)
 		{
-			console.log(selectedText);
-		}
+			translateText(selectedText);
+    }
 	}
+  
+  // Translate the text
+  function translateText(text)
+  {
+    console.log(text);
+    $('body').append('<div style="position: absolute; left: 400px; top:400px; z-index: 1000">' + text + '</div>');
+  }
 }
